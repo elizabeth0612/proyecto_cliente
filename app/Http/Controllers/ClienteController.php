@@ -58,7 +58,7 @@ class ClienteController extends Controller
             'dni'=>$request['dni'],
 
         ]);
-        return redirect()->route('clientes.index');
+        return redirect()->route('clientes.index')->with('guardado','Se guardo correctamente');
     }
 
     /**
