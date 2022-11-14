@@ -43,10 +43,10 @@ class ClienteController extends Controller
         'dni' => 'required',
         ];
         $messages = [
-            'nombre.required' => 'Agregar Nombre',
-            'apellido.required' => 'Agrega Apellido',
-            'telefono.required' => 'Agrega  Telefono',
-            'dni.required' => 'Agrega DNI',
+            'nombre.required' => 'Agregar nombre',
+            'apellido.required' => 'Agregar apellido',
+            'telefono.required' => 'Agregar  telefono',
+            'dni.required' => 'Agregar dni',
 
           
         ];
