@@ -33,4 +33,19 @@ class ClienteRequest extends FormRequest
         ];
     }
 
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'nombre.required' => 'Agregar nombre',
+            'apellido.required' => 'Agregar Apellido',
+            'telefono.required' => 'Agregar telefono',
+            'dni.required' => 'Agregar telefono',
+        ];
+    }
+
 }

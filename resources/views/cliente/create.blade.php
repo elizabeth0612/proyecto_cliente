@@ -34,10 +34,22 @@
 		      <div class="modal-footer">
 		        <input type="submit"  class="btn btn-primary" value="GUARDAR"> 
 		      </div>
+		      @if (count($errors) > 0)
+			    <div class="alert alert-danger">
+			    	<p>Corrige los siguientes errores:</p>
+			        <ul>
+			            @foreach ($errors->all() as $message)
+			                <li>{{ $message }}</li>
+			            @endforeach
+			        </ul>
+			    </div>
+			@endif
 		    </div>
 		  </div>
 	</div>
 	</form>
+
+
 	
 
 </body>
