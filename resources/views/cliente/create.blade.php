@@ -43,7 +43,6 @@
 		      </div>
 		      <div class="modal-footer">
 		        <input type="submit"  class="btn btn-primary" value="GUADAR"> 
-		        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancelar</button>
 		      </div>
 		    </div>
 		  </div>
