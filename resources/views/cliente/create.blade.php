@@ -30,19 +30,9 @@
 				    <label for="exampleInputEmail1">Dni</label>
 				    <input type="text" class="form-control" name="dni" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('dni')}}">
 				  </div>
-				  @if (count($errors) > 0)
-					    <div class="alert alert-danger">
-					    	<p>Corrige los siguientes errores:</p>
-					        <ul>
-					            @foreach ($errors->all() as $message)
-					                <li>{{ $message }}</li>
-					            @endforeach
-					        </ul>
-					    </div>
-					@endif
 		      </div>
 		      <div class="modal-footer">
-		        <input type="submit"  class="btn btn-primary" value="GUADAR"> 
+		        <input type="submit"  class="btn btn-primary" value="GUARDAR"> 
 		      </div>
 		    </div>
 		  </div>

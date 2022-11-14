@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cliente;
-use Illuminate\Http\Request;
+use App\Http\Requests\ClienteRequest;
 
 class ClienteController extends Controller
 {
@@ -34,23 +34,10 @@ class ClienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClienteRequest $request)
     {
-        $validat = [
-        'nombre' => 'required',
-        'apellido' => 'required',
-        'telefono' => 'required',
-        'dni' => 'required',
-        ];
-        $messages = [
-            'nombre.required' => 'Agregar nombre',
-            'apellido.required' => 'Agregar apellido',
-            'telefono.required' => 'Agregar  telefono',
-            'dni.required' => 'Agregar dni',
+     
 
-          
-        ];
-        $this->validate($request, $validat, $messages);
         Cliente::create([
             'nombre'=>$request['nombre'],
             'apellido'=>$request['apellido'],
@@ -58,6 +45,7 @@ class ClienteController extends Controller
             'dni'=>$request['dni'],
 
         ]);
+        
         return redirect()->route('clientes.index')->with('guardado','Se guardo correctamente');
     }
 
@@ -90,7 +78,7 @@ class ClienteController extends Controller
      * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cliente $cliente)
+    public function update(ClienteRequest $request, Cliente $cliente)
     {
         $cliente->update([
             'nombre'=>$request['nombre'],
