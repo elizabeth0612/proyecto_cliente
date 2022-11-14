@@ -26,8 +26,8 @@
 		      <th scope="col">Apellido</th>
 		      <th scope="col">Telefono</th>
 		      <th scope="col">Dni</th>
-		      <th scope="col">EDITAR</th>
-		      <th scope="col">ELIMINAR</th>
+		      <th scope="col">Editar</th>
+		      <th scope="col">Eliminar</th>
 		    </tr>
 		  </thead>
 		  <tbody>
