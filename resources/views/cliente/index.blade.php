@@ -39,13 +39,13 @@
 		      <td>{{$cliente->telefono}}</td>
 		      <td>{{$cliente->dni}}</td>
 		      <td>
-		      	<a class="btn btn-primary" href="{{route('clientes.edit',$cliente)}}" role="button">editar</a>
+		      	<a class="btn btn-primary" href="{{route('clientes.edit',$cliente)}}" role="button">Editar</a>
 		      </td>
 		      <td>
 		      	<form action="{{route('clientes.destroy',$cliente)}}" method="POST">
 		      		@csrf
 		      		@method('DELETE')
-		      		<input type="submit"  class="btn btn-primary" value="ELIMINAR" onclick="return confirm('desea eliminar')">
+		      		<input type="submit"  class="btn btn-primary" value="Eliminar" onclick="return confirm('desea eliminar')">
 		      	</form>
 		      </td>
 		    </tr>
