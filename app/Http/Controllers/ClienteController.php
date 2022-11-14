@@ -36,6 +36,21 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
+        $validat = [
+        'nombre' => 'required',
+        'apellido' => 'required',
+        'telefono' => 'required',
+        'dni' => 'required',
+        ];
+        $messages = [
+            'nombre.required' => 'Agregar Nombre',
+            'apellido.required' => 'Agrega Apellido',
+            'telefono.required' => 'Agrega  Telefono',
+            'dni.required' => 'Agrega DNI',
+
+          
+        ];
+        $this->validate($request, $validat, $messages);
         Cliente::create([
             'nombre'=>$request['nombre'],
             'apellido'=>$request['apellido'],

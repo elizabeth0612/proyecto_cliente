@@ -16,20 +16,30 @@
 		      <div class="modal-body">
 		        <div class="form-group">
 				    <label for="exampleInputEmail1">Nombre</label>
-				    <input type="text" class="form-control"  name="nombre" id="exampleInputEmail1" aria-describedby="emailHelp">
+				    <input type="text" class="form-control"  name="nombre" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('nombre')}}">
 				  </div>
 				<div class="form-group">
 				    <label for="exampleInputEmail1">Apellido</label>
-				    <input type="text" class="form-control" name="apellido" id="exampleInputEmail1" aria-describedby="emailHelp">
+				    <input type="text" class="form-control" name="apellido" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('apellido')}}">
 				  </div>
 				 <div class="form-group">
 				    <label for="exampleInputEmail1">Telefono</label>
-				    <input type="text" class="form-control" name="telefono" id="exampleInputEmail1" aria-describedby="emailHelp">
+				    <input type="text" class="form-control" name="telefono" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('telefono')}}">
 				  </div>
 				<div class="form-group">
 				    <label for="exampleInputEmail1">Dni</label>
-				    <input type="text" class="form-control" name="dni" id="exampleInputEmail1" aria-describedby="emailHelp">
+				    <input type="text" class="form-control" name="dni" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('dni')}}">
 				  </div>
+				  @if (count($errors) > 0)
+					    <div class="alert alert-danger">
+					    	<p>Corrige los siguientes errores:</p>
+					        <ul>
+					            @foreach ($errors->all() as $message)
+					                <li>{{ $message }}</li>
+					            @endforeach
+					        </ul>
+					    </div>
+					@endif
 		      </div>
 		      <div class="modal-footer">
 		        <input type="submit"  class="btn btn-primary" value="GUADAR"> 
