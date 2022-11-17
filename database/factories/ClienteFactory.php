@@ -11,5 +11,6 @@ $factory->define(Cliente::class, function (Faker $faker) {
         'apellido'=>$faker->name(),
         'telefono'=>$faker->phoneNumber(),
         'dni'=>$faker->numerify(),
+        'id_categoria'=>$faker->numberBetween(1,2),
     ];
 });

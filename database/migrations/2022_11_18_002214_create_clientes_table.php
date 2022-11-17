@@ -19,6 +19,9 @@ class CreateClientesTable extends Migration
             $table->string('apellido');
             $table->string('telefono');
             $table->string('dni');
+            $table->integer('id_categoria')->unsigned();
+            $table->foreign('id_categoria')->references('id_categoria')
+            ->on('categorias')->onDelete('cascade');
             $table->timestamps();
         });
     }

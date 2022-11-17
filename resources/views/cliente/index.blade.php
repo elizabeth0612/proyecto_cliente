@@ -26,6 +26,7 @@
 		      <th scope="col">Apellido</th>
 		      <th scope="col">Telefono</th>
 		      <th scope="col">Dni</th>
+		      <th scope="col">CATEGORIA</th>
 		      <th scope="col">Editar</th>
 		      <th scope="col">Eliminar</th>
 		    </tr>
@@ -38,6 +39,7 @@
 		      <td>{{$cliente->apellido}}</td>
 		      <td>{{$cliente->telefono}}</td>
 		      <td>{{$cliente->dni}}</td>
+		      <td>{{$cliente->id_categoria}}</td>
 		      <td>
 		      	<a class="btn btn-primary" href="{{route('clientes.edit',$cliente)}}" role="button">Editar</a>
 		      </td>
