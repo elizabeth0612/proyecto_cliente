@@ -39,7 +39,7 @@
 		      <td>{{$cliente->apellido}}</td>
 		      <td>{{$cliente->telefono}}</td>
 		      <td>{{$cliente->dni}}</td>
-		      <td>{{$cliente->id_categoria}}</td>
+		      <td>{{$cliente->categoria->nombre}}</td>
 		      <td>
 		      	<a class="btn btn-primary" href="{{route('clientes.edit',$cliente)}}" role="button">Editar</a>
 		      </td>
