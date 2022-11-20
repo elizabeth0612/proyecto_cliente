@@ -13,4 +13,7 @@ class Categoria extends Model
     {
         return $this->hasmany(Cliente::class, 'id_categoria', 'id_categoria');
     }
+     public function getGetNombreAttribute(){
+    		return strtolower($this->nombre);
+    }
 }

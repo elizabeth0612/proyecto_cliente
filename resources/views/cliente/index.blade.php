@@ -35,11 +35,11 @@
 		  	@foreach($clientes as $cliente)
 		    <tr>
 		      <th scope="row">{{$cliente->id_cliente}}</th>
-		      <td>{{$cliente->nombre}}</td>
-		      <td>{{$cliente->apellido}}</td>
+		      <td>{{$cliente->get_nombre}}</td>
+		      <td>{{$cliente->get_apellido}}</td>
 		      <td>{{$cliente->telefono}}</td>
 		      <td>{{$cliente->dni}}</td>
-		      <td>{{$cliente->categoria->nombre}}</td>
+		      <td>{{$cliente->categoria->get_nombre}}</td>
 		      <td>
 		      	<a class="btn btn-primary" href="{{route('clientes.edit',$cliente)}}" role="button">Editar</a>
 		      </td>
